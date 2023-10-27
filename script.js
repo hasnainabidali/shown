@@ -170,38 +170,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }
           });
         
-        //   tl.to(steps, {
-        //     opacity: 1,
-        //     duration: 100,
-        //     ease: "none"
-        //   }).to(steps, {
-        //     opacity: 0,
-        //     duration: 100,
-        //     ease: "none"
-        //   });
-
-        // gsap.fromTo(
-        //     steps, 
-        //     { opacity: 1 },
-        //     {
-        //         opacity: 0,
-        //         scrollTrigger: {
-        //             trigger: section,
-        //             start: 'top',
-        //             end: '+=500',
-        //             scrub: true,
-        //         }
-        // });
-        
-        // gsap.to(stepCount, { 
-        //     background: "#0188FF",
-        //     scrollTrigger: {
-        //         trigger: section,
-        //         start: 'top',
-        //         // end: '+=500',
-        //         scrub: true,
-        //     }
-        // });
 
         gsap.to(bar, { 
             height: "95%",
@@ -215,4 +183,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
         
       })
 
+});
+
+
+$( document ).ready(function() {
+  $('.row.opt-row .opt-item').hover( 
+    function() { 
+      var orgSrc = $(this).children('img').attr('src');
+      var gifSrc = $(this).children('img').attr('data-h');
+      $(this).children('img').attr('src', gifSrc) 
+      $(this).children('img').attr('data-h', orgSrc) 
+    }, 
+    function() { 
+      var orgSrc = $(this).children('img').attr('src');
+      var gifSrc = $(this).children('img').attr('data-h');
+      $(this).children('img').attr('src', gifSrc) 
+      $(this).children('img').attr('data-h', orgSrc) 
+    } 
+  ); 
 });
