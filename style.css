@@ -1107,6 +1107,40 @@ p.step-desciption span{
   section.inner-hero{
     padding-top: 60px;
   }
+  .step-item .step-bg-wrapper{
+    position: relative;
+  }
+  .step-item .step-bg-wrapper:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 400px;
+  }
+  .step-item:first-child .step-bg-wrapper:after{
+    background-image: url('./assets//images/step01-bg.png');
+    height: 400px;
+  }
+  .step-item:nth-child(2) .step-bg-wrapper:after{
+    background-image: url('./assets//images/step02-bg.png');
+    background-position: center;
+  }
+  .step-item:nth-child(3) .step-bg-wrapper:after{
+    background-image: url('./assets//images/step03-bg.png');
+    background-position: center left;
+  }
+  .step-item:nth-child(4) .step-bg-wrapper:after{
+    background-image: url('./assets//images/step04-bg.png');
+    background-position: center;
+  }
+  .step-item:nth-child(5) .step-bg-wrapper:after{
+    background-image: url('./assets//images/step05-bge.png');
+    z-index: -1;
+  }
 }
 
 @media (min-width: 768px){
