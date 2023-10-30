@@ -138,7 +138,6 @@ html.lenis {
     box-shadow: 1px 1px #ccc;
     text-decoration: none;
 }
-
 .nav-link{
   font-weight: 500;
   color: #394C5E;
@@ -146,7 +145,7 @@ html.lenis {
 .main-navbar ul.navbar-nav {
     gap: 40px;
 }
- .nav-link:hover{
+.nav-link:hover{
   color: #0188FF;
 }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
@@ -213,7 +212,14 @@ ul.dropdown-menu.solutions-dropdown .dropdown-item:focus:after, ul.dropdown-menu
   height: 2200px;
   z-index: -1;
 }
-
+.partners .section-1{
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.partners .section-1:before{
+  background-image: url(./assets/images/partners-bg.jpg), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.74) 18.51%, rgba(255, 255, 255, 0.80) 39.29%, rgba(255, 255, 255, 0.86) 83.26%, #FFF 100%);
+  height: 1200px;
+}
 
 .hero-title h1 {
   font-size: 54px;
@@ -231,7 +237,9 @@ ul.dropdown-menu.solutions-dropdown .dropdown-item:focus:after, ul.dropdown-menu
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.partners .hero-title h1{
+  padding-top: 5rem;
+}
 .below-cta-img {
   margin: 5rem 0rem;
   overflow: hidden;
@@ -1331,6 +1339,10 @@ section.ads-platforms .row>*{
   .founder-image{
     width: 64px;
   }
+  .partners .section-1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 @media (min-width: 768px){
@@ -1550,7 +1562,7 @@ section.ads-platforms .row>*{
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)  {
   .hero-title h1 {
     padding: 8rem 0rem 0rem;
   }
@@ -1669,5 +1681,14 @@ section.ads-platforms .row>*{
   }
   .vision-img{
     width: 550px;
+  }
+  .nav-item.dropdown{
+    margin-left: 0;
+  }
+  .main-navbar ul.navbar-nav{
+    margin-top: 30px;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu.solutions-dropdown{
+    width: 100%;
   }
 }
