@@ -218,7 +218,8 @@ ul.dropdown-menu.solutions-dropdown .dropdown-item:focus:after, ul.dropdown-menu
 }
 .partners .section-1:before{
   background-image: url(./assets/images/partners-bg.jpg), linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.74) 18.51%, rgba(255, 255, 255, 0.80) 39.29%, rgba(255, 255, 255, 0.86) 83.26%, #FFF 100%);
-  height: 1200px;
+  height: 1244px;
+  background-position: bottom;
 }
 
 .hero-title h1 {
@@ -491,7 +492,13 @@ p.under-heading {
 .purple-gradient-text {
   background: rgb(158,158,228);
   background: linear-gradient(90deg, rgba(158,158,228,1) 0%, rgba(32,99,202,1) 50%, rgba(55,162,255,1) 100%);
-  background: -webkit-linear-gradient(90deg, rgba(158,158,228,1) 0%, rgba(32,99,202,1) 50%, rgba(55,162,255,1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.purple-gradient-text-2 {
+  background: rgb(158,158,228);
+  background: linear-gradient(90deg, #9F9FE5 4.8%, #4F4FBE 37.38%, #0071D2 62.83%, #37A2FF 94.65%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -809,7 +816,16 @@ section.inner-hero {
   z-index: 1;
 }
 .innerPage footer{
-  background: #FDFDFF;
+  background: linear-gradient(180deg, #FAFAFF 0%, #FFF 100%);
+}
+.legal-page footer{
+  background: linear-gradient(180deg, #FAFAFF 0%, #FFF 100%);
+}
+.partners footer{
+  background: linear-gradient(180deg, #f1f1fa 0%, #E1E1F6 100%);
+}
+.careers footer{
+  background: linear-gradient(180deg, #FAFAFF 0%, #FFF 100%);
 }
 .feature-item{
   padding-top: 40px;
@@ -843,7 +859,7 @@ p.step-desciption span{
 section.inner-hero.inner-last-section{
   background-image: url('./assets/images/inner-last-bg.png');
   background-size: cover;
-  background-position: top center;
+  background-position: bottom center;
 }
 section.ads-platforms{
   background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(162, 163, 221, 0.07) 30.04%, rgba(100, 100, 198, 0.12) 100%);
@@ -935,6 +951,39 @@ section.ads-platforms .row>*{
 .founder-member{
   border-bottom: 1px solid #E2EAF1;
 }
+.value-item{
+  border-bottom: 1px solid #E2EAF1;
+}
+.position-item{
+  border-bottom: 1px solid #E2EAF1;
+}
+.mb-40{
+  margin-bottom: 40px;
+}
+.legal-page .legal-section p{
+  background: linear-gradient(90deg, #5D778D 41.7%, rgba(119, 142, 161, 0.90) 58.15%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.legal-page .legal-section a{
+  color: #0188FF;
+}
+.legal-page .legal-section li{
+  background: linear-gradient(90deg, #5D778D 41.7%, rgba(119, 142, 161, 0.90) 58.15%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.legal-page .legal-section li::marker{
+  color: #5D778D;
+}
+.list-roman{
+  list-style: upper-roman;
+}
+.list-roman li{
+  padding-left: 30px;
+}
 
 @media (max-width: 375px) {
 
@@ -973,6 +1022,12 @@ section.ads-platforms .row>*{
 @media (min-width: 1440px) {
 
 }
+@media (min-width: 1600px) {
+  .partners .section-1:before{
+    height: 1444px;
+    background-position: bottom;
+  }  
+}
 @media (min-width: 992px){
   body{
     max-width: 1920px;
@@ -1008,7 +1063,6 @@ section.ads-platforms .row>*{
   }
   .integrations .inner-hero{
     margin-top: 40px;
-    margin-bottom: 90px;
   }
 }
 
@@ -1030,6 +1084,9 @@ section.ads-platforms .row>*{
   html,
   body{
     overflow-x: hidden;
+  }
+  .container{
+    --bs-gutter-x: 3rem;
   }
   .hero-title h1{
     font-size: 40px;
@@ -1270,6 +1327,11 @@ section.ads-platforms .row>*{
   section.inner-hero{
     padding-top: 60px;
   }
+  .legal-page section.inner-hero{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-size: cover;
+  }
   .step-item .step-bg-wrapper{
     position: relative;
   }
@@ -1342,6 +1404,16 @@ section.ads-platforms .row>*{
   .partners .section-1 {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .list-roman{
+    padding-left: 10px !important;
+  }
+  .list-roman li {
+    padding-left: 30px;
+  }
+  .purple-gradient-text,
+  .purple-gradient-text-2 {
+    display: inline-block;
   }
 }
 
