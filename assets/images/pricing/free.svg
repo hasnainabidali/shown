@@ -1,0 +1,41 @@
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_371_2013)">
+<rect width="44" height="44" rx="12" fill="#0D004E"/>
+<g filter="url(#filter0_f_371_2013)">
+<ellipse cx="21.9984" cy="28.7831" rx="17.6" ry="26.2167" fill="#9123FF"/>
+</g>
+<g opacity="0.8" filter="url(#filter1_f_371_2013)">
+<ellipse cx="21.8996" cy="43.3527" rx="9.76606" ry="31.416" transform="rotate(-90.1415 21.8996 43.3527)" fill="url(#paint0_angular_371_2013)"/>
+</g>
+<circle cx="6.60104" cy="7.70065" r="0.366667" fill="white" fill-opacity="0.4"/>
+<circle cx="39.601" cy="4.03366" r="0.366667" fill="white" fill-opacity="0.4"/>
+<circle cx="35.9331" cy="18.7007" r="0.366667" fill="white" fill-opacity="0.4"/>
+<circle cx="42.1674" cy="30.0671" r="0.366667" fill="white" fill-opacity="0.4"/>
+<circle cx="2.93307" cy="33.3667" r="0.366667" fill="white" fill-opacity="0.4"/>
+<circle cx="6.60104" cy="26.0337" r="0.366667" fill="white" fill-opacity="0.4"/>
+<circle cx="22" cy="22" r="9" fill="url(#paint1_linear_371_2013)"/>
+</g>
+<defs>
+<filter id="filter0_f_371_2013" x="-19.0682" y="-20.9003" width="82.1333" height="99.3667" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="11.7333" result="effect1_foregroundBlur_371_2013"/>
+</filter>
+<filter id="filter1_f_371_2013" x="-32.455" y="10.6478" width="108.709" height="65.4098" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="11.4693" result="effect1_foregroundBlur_371_2013"/>
+</filter>
+<radialGradient id="paint0_angular_371_2013" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.8996 43.3527) rotate(87.1526) scale(31.4548 10.0037)">
+<stop offset="0.288285" stop-color="#F8DC78"/>
+<stop offset="0.77717" stop-color="#FF5BBA"/>
+</radialGradient>
+<linearGradient id="paint1_linear_371_2013" x1="22" y1="13" x2="22" y2="31" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0.6"/>
+</linearGradient>
+<clipPath id="clip0_371_2013">
+<rect width="44" height="44" rx="12" fill="white"/>
+</clipPath>
+</defs>
+</svg>
