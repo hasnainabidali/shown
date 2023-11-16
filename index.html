@@ -12,7 +12,7 @@
     </head>
     <body class="homepage">
         <header>
-            <nav class="main-navbar navbar fixed-top navbar-expand-lg pt-4 pb-4 p-md-4 bg-white">
+            <nav class="main-navbar navbar fixed-top navbar-expand-lg pt-4 pb-4 p-md-4">
                 <div class="container">
                     <a class="navbar-brand" href="/">
                         <img src="./assets/images/logo.svg" alt="" srcset="">
@@ -23,7 +23,7 @@
                         <i class="fas fa-times"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0 d-none d-md-flex">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Solutions
@@ -40,35 +40,83 @@
                                     <div class="col-md-6">
                                         <li><a class="dropdown-item" href="/x.html"><img src="./assets/images/X-h.png" /> X Ads</a></li>
                                         <li><a class="dropdown-item" href="/linkedin.html"><img src="./assets/images/linkedin-h.svg" /> Linkedin ads</a></li>
-                                        <li><a class="dropdown-item" href="/integrations.html">Integrations <i class="bi bi-chevron-right"></i></a></li>
+                                        <li><a class="dropdown-item" href="/integrations.html"><img src="./assets/images/Plug.svg" /> Integrations <i class="bi bi-chevron-right"></i></a></li>
                                     </div>
                                 </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Product Roadmap</a></li>
+                                <li><a class="dropdown-item" href="#">Support Center</a></li>
+                                <li><a class="dropdown-item" href="/contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/pricing.html">Pricing</a>
                         </li>
-                        <li class="nav-item dropdown">
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown d-md-none">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
+                            Solutions
+                            </a>
+                            <ul class="dropdown-menu solutions-dropdown" aria-labelledby="navbarDropdown">
+                                <h4>All platforms</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <li><a class="dropdown-item" href="/google.html"><img src="./assets/images/google-h.svg" /> Google Ads</a></li>
+                                        <li><a class="dropdown-item" href="/facebook.html"><img src="./assets/images/Facebook-h.svg" /> Facebook Ads</a></li>
+                                        <li><a class="dropdown-item" href="/instagram.html"><img src="./assets/images/Instagram-h.svg" /> Instagram Ads</a></li>
+                                        <li><a class="dropdown-item" href="/microsoft.html"><img src="./assets/images/microsoft-h.svg" /> Microsoft Ads</a></li>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <li><a class="dropdown-item" href="/x.html"><img src="./assets/images/X-h.png" /> X Ads</a></li>
+                                        <li><a class="dropdown-item" href="/linkedin.html"><img src="./assets/images/linkedin-h.svg" /> Linkedin ads</a></li>
+                                        <li><a class="dropdown-item" href="/integrations.html"><img src="./assets/images/Plug.svg" /> Integrations <i class="bi bi-chevron-right"></i></a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown d-md-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item active" href="#">English</a></li>
-                                <li><a class="dropdown-item" href="#">Español</a></li>
-                                <li><a class="dropdown-item" href="#">Dutch</a></li>
-                                <li><a class="dropdown-item" href="#">Français</a></li>
-                                <li><a class="dropdown-item" href="#">Indonesian</a></li>
-                                <li><a class="dropdown-item" href="#">Italiano</a></li>
-                                <li><a class="dropdown-item" href="#">Português</a></li>
-                                <li><a class="dropdown-item" href="#">Türkçe</a></li>
-                                <li><a class="dropdown-item" href="#">Русский</a></li>
-                                <li><a class="dropdown-item" href="#">العربية</a></li>
+                                <li><a class="dropdown-item" href="#">Product Roadmap</a></li>
+                                <li><a class="dropdown-item" href="#">Support Center</a></li>
+                                <li><a class="dropdown-item" href="/contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-md-none">
+                            <a class="nav-link" aria-current="page" href="/pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown lang-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            EN
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <h4>all languages</h4>
+                                <li><a class="dropdown-item" href="#"><span>ES</span>Español</a></li>
+                                <li><a class="dropdown-item" href="#"><span>DE</span>Deutsch</a></li>
+                                <li><a class="dropdown-item" href="#"><span>FR</span>Français</a></li>
+                                <li><a class="dropdown-item" href="#"><span>IN</span>Indonesian</a></li>
+                                <li><a class="dropdown-item" href="#"><span>IT</span>Italiano</a></li>
+                                <li><a class="dropdown-item" href="#"><span>PO</span>Português</a></li>
+                                <li><a class="dropdown-item" href="#"><span>TU</span>Türkçe</a></li>
+                                <li><a class="dropdown-item" href="#"><span>RU</span>Русский</a></li>
+                                <li><a class="dropdown-item" href="#"><span>AR</span>العربية</a></li>
                             </ul>
                         </li>
                         <li class="nav-item d-none d-md-block">
                         <a class="nav-link" href="#">Login</a>
                         </li>
-                        <li class="nav-item d-none d-md-block">
+                        <li class="nav-item d-none d-md-flex align-items-center justify-content-center">
                             <a href="#" class="sbtn d-block signupbtn text-center">Get Started</a>
                         </li>
                         <li class="nav-m-btn d-md-none">
@@ -83,8 +131,8 @@
         <section class="section-1 ">
             <div class="container my-md-5">
                 <div class="hero-title" >
-                    <h1 class="font-medium mx-auto text-center my-4" data-aos="fade-up">Grow your business online.<br>Let AI create and optimize your ads.</h1>
-                    <h3 class="hero-subhead my-4  mx-auto text-center" data-aos="fade-in" data-aos-delay="500">Create your ads automatically & publish them to all major advertising channels. Let our AI optimise them & get the best results possible.</h3>
+                    <h1 class="font-medium mx-auto text-center" data-aos="fade-up">Grow your business online.<br>Let AI create and optimize your ads.</h1>
+                    <h3 class="hero-subhead pt-0 mb-4 my-md-4 mx-auto text-center" data-aos="fade-in" data-aos-delay="500">Create your ads automatically & publish them to all major advertising channels. Let our AI optimise them & get the best results possible.</h3>
                 </div>
                 <div class="hero-cta mx-auto text-center" data-aos="fade-in" data-aos-delay="500">
                     <a href="#" class="sbtn d-inline-block">Create a free account</a>
@@ -98,8 +146,7 @@
                 </div>
                 <div class="below-cta-img position-relative">
                     <div class="image mx-auto text-center position-relative">
-                        <div class="video-progress"></div>
-                        <img src="./assets/images/Desktop.png" class="below-hero-img" alt="">
+                        <img src="./assets/images/home-video.png" class="below-hero-img" alt="">
                         <div class="pulse-play">
                             <button type="button" class="play-btn">
                                 <div class="pulse-box">
@@ -115,10 +162,10 @@
         </section>
         <section class="section-2 py-4">
             <div class="container my-md-5">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 padding-10">
-                        <h2 class="heading-large">No experience or large pockets needed</h2>
-                        <p class="under-heading mt-4">New to online advertising? Learn how Shown lets you run effective ad campaigns without costly agencies or freelancers.</p>
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-5">
+                        <h2 class="heading-large">No experience or big budget needed</h2>
+                        <p class="under-heading mt-4">New to online advertising? Learn how Shown helps  you reach your advertising goals without the high costs of traditional solutions.</p>
                     </div>
                     <div class="col-lg-6 d-none d-md-block">
                         <div class="section-2-image position-relative">
@@ -166,9 +213,46 @@
                 </div>
             </div>
         </section>
+        <section class="testimonials py-4 mb-5 mt-4">
+            <div class="container">
+                <div class="row g-4 justify-content-center aos-init aos-animate" data-aos="fade-in">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="opt-item box-item">
+                            <img src="./assets/images/pricing/stars.svg" class="mb-1">
+                            <p class="under-heading fs-5">I started using Shown for my business and I'm really satisfied. A special thank you to the support team for helping me!</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="./assets/images/pricing/test1.png">
+                                <h6 class="mb-0 ms-3">Brenton Miller</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="opt-item box-item">
+                            <img src="./assets/images/pricing/stars.svg" class="mb-1">
+                            <p class="under-heading fs-5">Shown is like a digital marketing guru sitting near me and saving my time by doing all the manual work!</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="./assets/images/pricing/test2.png">
+                                <h6 class="mb-0 ms-3">Alexander Skibinskiy</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="opt-item box-item">
+                            <img src="./assets/images/pricing/stars.svg" class="mb-1">
+                            <p class="under-heading fs-5">I used Shown to advertise my 1 person business. I had very good results and I am happy with their automated tool & support plan.</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="./assets/images/pricing/test3.png">
+                                <h6 class="mb-0 ms-3">Baptiste Michiels</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <section class="section-4 py-4">
             <div class="container my-5">
-                <h2 class="section-4-head text-center font-medium" data-aos="fade-up">Create data-driven<br> ad campaigns <span class="purple-gradient-text">in seconds</span></h2>
+                <h2 class="section-4-head text-center font-medium" data-aos="fade-up">Create data-driven<br> ad campaigns <span class="purple-gradient-text">in minutes</span></h2>
                 <div class="row row-2" data-aos="fade-in">
                     <div class="col-md-6 r-col-1  ">
                         <div class="ad-image">
@@ -176,13 +260,13 @@
                             <div class="masked-bg d-none d-md-block"></div>
                             <div class="masked-bg-m d-md-none"></div>
                         </div>
-                        <div class="ad-text text-left d-none d-md-block">
+                        <div class="eff-text text-left d-none d-md-block">
                             <h3 class="font-medium">High-performing ads. Made effortlessly.</h3>
                             <p>Create ad campaigns like the biggest brands in a matter<br> of minutes. Discover the power of automation.</p>
                         </div>
                     </div>
                     <div class="col-md-6 r-col-2 mx-auto text-center">
-                        <img class="ad-sample" src="./assets/images/efforts.png" alt="">
+                        <img class="eff-sample" src="./assets/images/efforts.png" alt="">
                     </div>
                     <div class="col d-md-none">
                         <div class="px-3 mt-5">
@@ -236,19 +320,19 @@
                 <p class="under-heading text-center max-sm mx-auto" data-aos="fade-in">Shown will optimise your ads around the clock on every channel. Pausing keywords, creating new ads to A/B test or simply suggesting new targeting, Shown will cover it all.</p>
             </div>
             <div class="row opt-row justify-content-center mt-5">
-                <div class="col-lg-3 col-md-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="opt-item box-item">
                         <img src="./assets/images/opt-1e.png" data-h="./assets/images/home-2.gif" />
                         <h3 class="font-medium">Pausing and Optimizing Keywords</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="opt-item box-item">
                         <img src="./assets/images/opt-2.png" data-h="./assets/images/home-3.gif" />
                         <h3 class="font-medium">Creating New Ads to A/B test</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="opt-item box-item">
                         <img src="./assets/images/opt-3.png" data-h="./assets/images/opt-3.png" />
                         <h3 class="font-medium">Suggesting New Targeting</h3>
@@ -256,14 +340,14 @@
                 </div>
             </div>
         </section>
-        <section class="section-6 py-4">
+        <section class="section-6 py-4 py-md-5">
             <div class="container my-md-5">
                 <h2 class="section-4-head text-center font-medium" data-aos="fade-up">Remain in control <br/><span class="purple-gradient-text">with our all-in-one dashboard</span></h2>
                 <p class="under-heading text-center max-sm mx-auto" data-aos="fade-in">See how your ad campaigns are performing or import existing campaigns to have a single point of truth. Compare different channels, campaigns & ads at a glance.</p>
                 <div class="hero-cta mx-auto text-center mt-5 mb-3" data-aos="fade-in">
                     <a href="#" class="sbtn d-inline-block">Create a free account</a>
                 </div>
-                <div class="row cont-row mt-5">
+                <div class="row cont-row mt-5 pt-4">
                     <div class="col-md-7" data-aos="fade-right">
                         <div class="cont-item box-item">
                             <img src="./assets/images/cont-1.svg" />
@@ -281,7 +365,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-7 py-4">
+        <section class="section-7 py-4 py-md-5 my-md-5">
             <div class="container my-md-2">
                 <div class="row align-items-center text-center text-lg-start">
                     <div class="col-lg-5" data-aos="fade-left">
@@ -299,8 +383,8 @@
             <img src="./assets/images/int-logos.svg" width="100%" class="int-logos d-none d-md-block" />
             <img src="./assets/images/int-logos-m.svg" width="100%" class="int-logos d-md-none" />
             <div class="container my-md-5" data-aos="zoom-in">
-                <h2 class="section-4-head text-center font-medium">Sync relevant assets <br/><span class="purple-gradient-text">with Integrations</span></h2>
-                <p class="under-heading text-center max-sm mx-auto">Integrate your different apps and let Shown understand your business & synchronise your valuable assets automatically.</p>
+                <h2 class="section-4-head text-center font-medium">Import relevant assets <br/><span class="purple-gradient-text">with Integrations</span></h2>
+                <p class="under-heading text-center max-sm mx-auto">Integrate your different apps & synchronise all your valuable assets such as email lists, product list & other to create profitable ads.</p>
                 <div class="hero-cta mx-auto text-center mt-5">
                     <a href="#" class="sbtn d-inline-block">See all integrations</a>
                 </div>
@@ -309,7 +393,7 @@
         <section class="section-9 py-4">
             <div class="container my-md-5 position-relative z-1" data-aos="fade-up">
                 <h2 class="section-4-head text-center font-medium"><span class="purple-gradient-text">Join 20,000 small businesses</span><br/> on Shown</h2>
-                <p class="under-heading text-center max-sm mx-auto">Join our thriving community and experience the difference. Unlock growth opportunities to take your business to the next level. </p>
+                <p class="under-heading text-center max-sm mx-auto">Join our thriving community and experience the difference. <br/>Unlock growth opportunities to take your business to the next level. </p>
                 <div class="hero-cta mx-auto text-center mt-5">
                     <a href="#" class="sbtn d-inline-block">Create a free account</a>
                 </div>

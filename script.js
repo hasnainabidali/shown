@@ -6,7 +6,52 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const lenis = new Lenis()
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    function debounce(fn, ms = 300) {
+      let timeoutId;
+      return function (...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => fn.apply(args), ms);
+      };
+    }
+    
+
+    let lastHeight = 0;
+    let hideNav = false;
+    let isScrolled = false;
+
+    lenis.on('scroll', ({ scroll }) => {
+      debounce(() => (lastHeight = scroll))();
+
+
+      if (lastHeight < scroll && scroll > 160 && !hideNav) {
+        document.body.classList.add('hide_header');
+        hideNav = true;
+      }
+      if (lastHeight >= scroll && scroll > 160 && hideNav) {
+        document.body.classList.remove('hide_header');
+        hideNav = false;
+      }
+
+      if (lastHeight < scroll && scroll > 220 && !isScrolled) {
+        document.body.classList.add('scrolled');
+        isScrolled = true;
+      }
+
+      if (lastHeight >= scroll && scroll < 220 && isScrolled) {
+        document.body.classList.remove('scrolled');
+        isScrolled = false;
+      }
+    });
 
     // lenis.on('scroll', (e) => {
     // console.log(e)
@@ -23,6 +68,36 @@ window.addEventListener('DOMContentLoaded', (event) => {
         once: true
     });
 
+
+    if (window.innerWidth > 992) {
+
+      document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+    
+        everyitem.addEventListener('mouseover', function(e){
+    
+          let el_link = this.querySelector('a[data-bs-toggle]');
+    
+          if(el_link != null){
+            let nextEl = el_link.nextElementSibling;
+            el_link.classList.add('show');
+            nextEl.classList.add('show');
+          }
+    
+        });
+        everyitem.addEventListener('mouseleave', function(e){
+          let el_link = this.querySelector('a[data-bs-toggle]');
+    
+          if(el_link != null){
+            let nextEl = el_link.nextElementSibling;
+            el_link.classList.remove('show');
+            nextEl.classList.remove('show');
+          }
+    
+    
+        })
+      });
+    
+    }
     // var heroTl = gsap.timeline({repeat: 2, repeatDelay: 1});
 
     const progressBar = document.querySelector('.progress-bar');
@@ -130,14 +205,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
       });
 
-    gsap.to(".video-progress", {
-        width: "120%",
-        scrollTrigger: {
-          trigger: ".below-cta-img",
-          scrub: true,
-          ease: Power2.easeInOut
-        }
-      });
+    // gsap.to(".video-progress", {
+    //     width: "120%",
+    //     scrollTrigger: {
+    //       trigger: ".below-cta-img",
+    //       scrub: true,
+    //       ease: Power2.easeInOut
+    //     }
+    //   });
 
 
     gsap.to(".inner-steps", {

@@ -12,19 +12,20 @@
     </head>
     <body class="innerPage contact"> 
         <header>
-            <nav class="main-navbar navbar fixed-top navbar-expand-lg pt-4 pb-4 p-md-4 bg-white">
+            <nav class="main-navbar navbar fixed-top navbar-expand-lg pt-4 pb-4 p-md-4">
                 <div class="container">
                     <a class="navbar-brand" href="/">
                         <img src="./assets/images/logo.svg" alt="" srcset="">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
                         <i class="fas fa-bars"></i>
                         <i class="fas fa-times"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mb-2 mb-lg-0 d-none d-md-flex">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Solutions
                             </a>
                             <ul class="dropdown-menu solutions-dropdown" aria-labelledby="navbarDropdown">
@@ -39,36 +40,84 @@
                                     <div class="col-md-6">
                                         <li><a class="dropdown-item" href="/x.html"><img src="./assets/images/X-h.png" /> X Ads</a></li>
                                         <li><a class="dropdown-item" href="/linkedin.html"><img src="./assets/images/linkedin-h.svg" /> Linkedin ads</a></li>
-                                        <li><a class="dropdown-item" href="/integrations.html">Integrations <i class="bi bi-chevron-right"></i></a></li>
+                                        <li><a class="dropdown-item" href="/integrations.html"><img src="./assets/images/Plug.svg" /> Integrations <i class="bi bi-chevron-right"></i></a></li>
                                     </div>
                                 </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Product Roadmap</a></li>
+                                <li><a class="dropdown-item" href="#">Support Center</a></li>
+                                <li><a class="dropdown-item" href="/contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/pricing.html">Pricing</a>
                         </li>
-                        <li class="nav-item dropdown">
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown d-md-none">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English
+                            Solutions
+                            </a>
+                            <ul class="dropdown-menu solutions-dropdown" aria-labelledby="navbarDropdown">
+                                <h4>All platforms</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <li><a class="dropdown-item" href="/google.html"><img src="./assets/images/google-h.svg" /> Google Ads</a></li>
+                                        <li><a class="dropdown-item" href="/facebook.html"><img src="./assets/images/Facebook-h.svg" /> Facebook Ads</a></li>
+                                        <li><a class="dropdown-item" href="/instagram.html"><img src="./assets/images/Instagram-h.svg" /> Instagram Ads</a></li>
+                                        <li><a class="dropdown-item" href="/microsoft.html"><img src="./assets/images/microsoft-h.svg" /> Microsoft Ads</a></li>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <li><a class="dropdown-item" href="/x.html"><img src="./assets/images/X-h.png" /> X Ads</a></li>
+                                        <li><a class="dropdown-item" href="/linkedin.html"><img src="./assets/images/linkedin-h.svg" /> Linkedin ads</a></li>
+                                        <li><a class="dropdown-item" href="/integrations.html"><img src="./assets/images/Plug.svg" /> Integrations <i class="bi bi-chevron-right"></i></a></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown d-md-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item active" href="#">English</a></li>
-                                <li><a class="dropdown-item" href="#">Español</a></li>
-                                <li><a class="dropdown-item" href="#">Dutch</a></li>
-                                <li><a class="dropdown-item" href="#">Français</a></li>
-                                <li><a class="dropdown-item" href="#">Indonesian</a></li>
-                                <li><a class="dropdown-item" href="#">Italiano</a></li>
-                                <li><a class="dropdown-item" href="#">Português</a></li>
-                                <li><a class="dropdown-item" href="#">Türkçe</a></li>
-                                <li><a class="dropdown-item" href="#">Русский</a></li>
-                                <li><a class="dropdown-item" href="#">العربية</a></li>
+                                <li><a class="dropdown-item" href="#">Product Roadmap</a></li>
+                                <li><a class="dropdown-item" href="#">Support Center</a></li>
+                                <li><a class="dropdown-item" href="/contact.html">Contact</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-md-none">
+                            <a class="nav-link" aria-current="page" href="/pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown lang-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            EN
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item active" href="#"><span>EN</span>English</a></li>
+                                <li><a class="dropdown-item" href="#"><span>ES</span>Español</a></li>
+                                <li><a class="dropdown-item" href="#"><span>DE</span>Deutsch</a></li>
+                                <li><a class="dropdown-item" href="#"><span>FR</span>Français</a></li>
+                                <li><a class="dropdown-item" href="#"><span>IN</span>Indonesian</a></li>
+                                <li><a class="dropdown-item" href="#"><span>IT</span>Italiano</a></li>
+                                <li><a class="dropdown-item" href="#"><span>PO</span>Português</a></li>
+                                <li><a class="dropdown-item" href="#"><span>TU</span>Türkçe</a></li>
+                                <li><a class="dropdown-item" href="#"><span>RU</span>Русский</a></li>
+                                <li><a class="dropdown-item" href="#"><span>AR</span>العربية</a></li>
                             </ul>
                         </li>
                         <li class="nav-item d-none d-md-block">
                         <a class="nav-link" href="#">Login</a>
                         </li>
-                        <li class="nav-item d-none d-md-block">
-                            <a href="#" class="sbtn d-block signupbtn  text-center">Get Started</a>
+                        <li class="nav-item d-none d-md-flex align-items-center justify-content-center">
+                            <a href="#" class="sbtn d-block signupbtn text-center">Get Started</a>
                         </li>
                         <li class="nav-m-btn d-md-none">
                             <a class="nav-link" href="#">Login</a>
