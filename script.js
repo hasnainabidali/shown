@@ -6,98 +6,110 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smooth: true,
-      smoothTouch: false,
-      touchMultiplier: 2,
-    });
 
-    function debounce(fn, ms = 300) {
-      let timeoutId;
-      return function (...args) {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => fn.apply(args), ms);
-      };
+    if (window.innerWidth > 992) {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        smoothTouch: true,
+        touchMultiplier: 2,
+      });
+      
+
+      function debounce(fn, ms = 300) {
+        let timeoutId;
+        return function (...args) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => fn.apply(args), ms);
+        };
+      }
+      
+
+      let lastHeight = 0;
+      let hideNav = false;
+      let isScrolled = false;
+
+      lenis.on('scroll', ({ scroll }) => {
+        debounce(() => (lastHeight = scroll))();
+
+
+        if (lastHeight < scroll && scroll > 80 && !hideNav) {
+          document.body.classList.add('hide_header');
+          hideNav = true;
+        }
+        if (lastHeight >= scroll && scroll > 80 && hideNav) {
+          document.body.classList.remove('hide_header');
+          hideNav = false;
+        }
+
+        if (lastHeight < scroll && scroll > 80 && !isScrolled) {
+          document.body.classList.add('scrolled');
+          isScrolled = true;
+        }
+
+        if (lastHeight >= scroll && scroll < 80 && isScrolled) {
+          document.body.classList.remove('scrolled');
+          isScrolled = false;
+        }
+
+        
+        ScrollTrigger.update()
+      });
+
+      // lenis.on('scroll', (e) => {
+      // console.log(e)
+      // })
+      gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+      })
+      
+      gsap.ticker.lagSmoothing(0)
+
     }
-    
+    // function raf(time) {
+    // lenis.raf(time)
+    // requestAnimationFrame(raf)
+    // }
 
-    let lastHeight = 0;
-    let hideNav = false;
-    let isScrolled = false;
-
-    lenis.on('scroll', ({ scroll }) => {
-      debounce(() => (lastHeight = scroll))();
-
-
-      if (lastHeight < scroll && scroll > 160 && !hideNav) {
-        document.body.classList.add('hide_header');
-        hideNav = true;
-      }
-      if (lastHeight >= scroll && scroll > 160 && hideNav) {
-        document.body.classList.remove('hide_header');
-        hideNav = false;
-      }
-
-      if (lastHeight < scroll && scroll > 220 && !isScrolled) {
-        document.body.classList.add('scrolled');
-        isScrolled = true;
-      }
-
-      if (lastHeight >= scroll && scroll < 220 && isScrolled) {
-        document.body.classList.remove('scrolled');
-        isScrolled = false;
-      }
-    });
-
-    // lenis.on('scroll', (e) => {
-    // console.log(e)
-    // })
-
-    function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-    }
-
-    requestAnimationFrame(raf)
+    // requestAnimationFrame(raf)
 
     AOS.init({
         once: true
     });
 
 
-    if (window.innerWidth > 992) {
+    // if (window.innerWidth > 992) {
 
-      document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
+    //   document.querySelectorAll('.navbar .nav-item').forEach(function(everyitem){
     
-        everyitem.addEventListener('mouseover', function(e){
+    //     everyitem.addEventListener('mouseover', function(e){
     
-          let el_link = this.querySelector('a[data-bs-toggle]');
+    //       let el_link = this.querySelector('a[data-bs-toggle]');
     
-          if(el_link != null){
-            let nextEl = el_link.nextElementSibling;
-            el_link.classList.add('show');
-            nextEl.classList.add('show');
-          }
+    //       if(el_link != null){
+    //         let nextEl = el_link.nextElementSibling;
+    //         el_link.classList.add('show');
+    //         nextEl.classList.add('show');
+    //       }
     
-        });
-        everyitem.addEventListener('mouseleave', function(e){
-          let el_link = this.querySelector('a[data-bs-toggle]');
+    //     });
+    //     everyitem.addEventListener('mouseleave', function(e){
+    //       let el_link = this.querySelector('a[data-bs-toggle]');
     
-          if(el_link != null){
-            let nextEl = el_link.nextElementSibling;
-            el_link.classList.remove('show');
-            nextEl.classList.remove('show');
-          }
+    //       if(el_link != null){
+    //         let nextEl = el_link.nextElementSibling;
+    //         el_link.classList.remove('show');
+    //         nextEl.classList.remove('show');
+    //       }
     
     
-        })
-      });
+    //     })
+    //   });
     
-    }
+    // }
     // var heroTl = gsap.timeline({repeat: 2, repeatDelay: 1});
 
     const progressBar = document.querySelector('.progress-bar');
